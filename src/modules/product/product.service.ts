@@ -143,4 +143,12 @@ export class ProductService {
 
         return { success: true, message: "Product deleted successfully" };
     }
+
+    async getProductById(params: ParamProductIdDTO) {
+        const product = await this.productRepository.findById(params.ProductId, {}, { populate: [{ path: "categoryId" }] });
+        if (!product) {
+            throw new BadRequestException("Product not found");
+        }
+        return { success: true, data: product };
+    }
 }

@@ -8,6 +8,7 @@ import { ProductModule } from './modules/product/product.module';
 import { CartModule } from './modules/cart/cart.module';
 import { OrderModule } from './modules/order/order.module';
 import { CouponModule } from './modules/coupon/coupon.module';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { CouponModule } from './modules/coupon/coupon.module';
     CartModule,
     OrderModule,
     CouponModule,
+    DashboardModule,
   ],
   controllers: [],
   providers: [],

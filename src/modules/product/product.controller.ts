@@ -62,4 +62,9 @@ export class productController {
     async deleteProduct(@Param() params: ParamProductIdDTO) {
         return await this.productService.deleteProduct(params);
     }
+
+    @Get(":ProductId")
+    async getProductById(@Param() params: ParamProductIdDTO) {
+        return await this.productService.getProductById(params);
+    }
 }
