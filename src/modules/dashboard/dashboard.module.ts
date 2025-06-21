@@ -7,19 +7,20 @@ import { UserRepository } from 'src/DB/models/User/user.repository';
 import { orderModel } from 'src/DB/models/Order/order.model';
 import { productModel } from 'src/DB/models/Product/product.model';
 import { UserModel } from 'src/DB/models/User/user.model';
+import { SharedModule } from 'src/commen/sharedModules';
 
 @Module({
   imports: [
     orderModel,
     productModel,
-    UserModel,
+    SharedModule,
   ],
   controllers: [DashboardController],
   providers: [
     DashboardService,
     orderRepository,
     ProductRepository,
-    UserRepository,
+
   ],
 })
-export class DashboardModule {} 
+export class DashboardModule { } 
